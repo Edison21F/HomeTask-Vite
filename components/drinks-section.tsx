@@ -6,17 +6,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const drinks = [
   {
-    title: "Cervezas",
+    title: "Beers",
     icon: Beer,
-    items: ["Nacional", "Importada", "Artesanal"],
+    items: ["National", "Imported", "Craft"],
   },
   {
     title: "Micheladas",
     icon: Wine,
-    items: ["Clásica", "Especial", "Rock&Reilly's"],
+    items: ["Classic", "Special", "Rock&Reilly's"],
   },
   {
-    title: "Cocteles",
+    title: "Cocktails",
     icon: Cocktail,
     items: ["Mojito", "Margarita", "Long Island"],
   },
@@ -37,7 +37,7 @@ export function DrinksSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-3xl font-bold text-center text-white">Bebidas</h2>
+        <h2 className="text-3xl font-bold text-center text-white">Drinks</h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {drinks.map((drink, index) => (
@@ -78,4 +78,3 @@ export function DrinksSection() {
     </section>
   )
 }
-

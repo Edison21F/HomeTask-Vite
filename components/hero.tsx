@@ -10,8 +10,8 @@ export function Hero() {
         <div className="space-y-4">
           <h2 className="text-3xl font-bold text-primary">Rock&Reilly's Ecuador</h2>
           <p className="text-lg">
-            Bienvenidos a Rock&Reilly's, donde la buena música se encuentra con la mejor comida. Un espacio único en
-            Quito que combina el ambiente rockero con una experiencia gastronómica excepcional.
+            Welcome to Rock&Reilly's, where great music meets the best food. A unique space in
+            Quito that combines a rock atmosphere with an exceptional gastronomic experience.
           </p>
           <p className="text-secondary">📍 Cóndor Ñan Oe2-283 y Rupay Esq. Sector Quitumbe, Quito Ecuador</p>
         </div>
@@ -23,7 +23,7 @@ export function Hero() {
                   <CardContent className="flex aspect-square items-center justify-center p-6">
                     <img
                       src={src}
-                      alt={`Imagen ${index + 1}`}
+                      alt={`Image ${index + 1}`}
                       className="w-full h-full object-cover rounded-lg"
                     />
                   </CardContent>

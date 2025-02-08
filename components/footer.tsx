@@ -48,12 +48,11 @@ export function Footer() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <p>Aceptamos todas las tarjetas</p>
-            <p className="mt-2">© 2025 Rock&Reilly's - Contribuye by YEC</p>
+            <p>We accept all credit cards</p>
+            <p className="mt-2">© 2025 Rock&Reilly's - Contributed by YEC</p>
           </motion.div>
         </motion.div>
       </div>
     </footer>
   )
 }
-

@@ -22,7 +22,7 @@ export function Navbar() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          ¡Bienvenidos!
+          ¡Welcome!
         </motion.div>
       </div>
     </motion.nav>
