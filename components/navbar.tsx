@@ -1,6 +1,6 @@
 "use client"
 
-import { Music2 } from "lucide-react"
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 export function Navbar() {
@@ -13,7 +13,13 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <motion.div className="flex items-center gap-2" whileHover={{ scale: 1.05 }}>
-          <Music2 className="h-6 w-6 text-primary" />
+          <Image
+            src="/sellos/local.png"
+            alt="Logo"
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-full object-cover"
+          />
           <h1 className="text-xl font-bold text-primary">Rock&Reilly's</h1>
         </motion.div>
         <motion.div
