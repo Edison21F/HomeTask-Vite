@@ -1,61 +1,48 @@
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function HomePage() {
     const navigate = useNavigate();
 
     return (
-        <div style={{
-            height: "100vh",
-            background: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "#fff",
-            fontFamily: "Arial, sans-serif",
-            textAlign: "center",
-            padding: "1rem"
-        }}>
-            <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>Bienvenido a mi Portafolio</h1>
-            <p style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>
-                Descubre mis proyectos de desarrollo web.
-            </p>
-            <div style={{ display: "flex", gap: "1rem" }}>
+        <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-800 to-blue-600 text-white text-center px-6">
+            <motion.h1
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-4xl md:text-5xl font-bold mb-4"
+            >
+                Bienvenido a Task Manager
+            </motion.h1>
+
+            <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                className="text-lg md:text-xl mb-8 max-w-xl"
+            >
+                Organiza tus tareas, mantente productivo y gestiona tu tiempo de forma eficiente.
+            </motion.p>
+
+            <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex gap-4 flex-wrap justify-center"
+            >
                 <button
+                    className="bg-white text-blue-800 hover:bg-gray-100 px-6 py-3 font-semibold rounded-lg shadow-md"
                     onClick={() => navigate("/login")}
-                    style={{
-                        padding: "0.75rem 1.5rem",
-                        fontSize: "1rem",
-                        backgroundColor: "#fff",
-                        color: "#1e3c72",
-                        border: "none",
-                        borderRadius: "8px",
-                        cursor: "pointer",
-                        transition: "transform 0.2s ease"
-                    }}
-                    onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-                    onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
                 >
                     Iniciar sesión
                 </button>
                 <button
+                    className="border border-white text-white hover:bg-white hover:text-blue-800 px-6 py-3 font-semibold rounded-lg"
                     onClick={() => navigate("/register")}
-                    style={{
-                        padding: "0.75rem 1.5rem",
-                        fontSize: "1rem",
-                        backgroundColor: "transparent",
-                        color: "#fff",
-                        border: "2px solid #fff",
-                        borderRadius: "8px",
-                        cursor: "pointer",
-                        transition: "transform 0.2s ease"
-                    }}
-                    onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-                    onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
                 >
                     Registrarse
                 </button>
-            </div>
+            </motion.div>
         </div>
     );
 }
