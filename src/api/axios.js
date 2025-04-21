@@ -1,8 +1,11 @@
-import axios from "axios";
+const instance = axios.create({
+    baseURL: 'https://backend.onrender.com/api',
+});
 
-const instace =axios.create({
-    baseURL: 'https://backed-1ule.onrender.com/api',
-    withCredentials: true,
-})
-
-export default instace
+instance.interceptors.request.use(config => {
+    const token = localStorage.getItem('token');
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+});
