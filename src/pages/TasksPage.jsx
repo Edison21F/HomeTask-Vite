@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useTasks } from "../context/TasksContext";
 import TaskCard from "../components/TaskCard";
-
+import { useNavigate } from "react-router-dom";
 function TaskPage() {
     const { fetchTasks, tasks } = useTasks();
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchTasks();
@@ -22,6 +23,13 @@ function TaskPage() {
                     ))}
                 </div>
             )}
+            <br />
+            <button
+                className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200" 
+                onClick={() => navigate("/add-tasks")}
+            >
+                Create Task
+            </button>
         </div>
     );
 }
